@@ -3,6 +3,7 @@ import AnimatedTitle from './AnimatedTitle';
 import AnimatedLogo from './AnimatedLogo';
 import AnimatedNavbar from '../../layout/Navbar/AnimatedNavbar';
 import TelegramButton from './TelegramButton';
+import ShmnGoldWhiteLong from '../../../assets/images/ShmnGoldWhiteLong.svg';
 
 interface AnimatedHeroProps {
   onMenuClick: () => void;
@@ -33,7 +34,7 @@ const AnimatedHero = ({ onMenuClick }: AnimatedHeroProps) => {
       <div className="min-h-screen text-gray-900 relative overflow-x-hidden">
         <div className="absolute inset-0 -z-10 w-full h-full bg-white"
           style={{ 
-            backgroundImage: 'url(src/assets/images/ShmnGoldWhiteLong.svg)', 
+            backgroundImage: `url(${ShmnGoldWhiteLong})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
