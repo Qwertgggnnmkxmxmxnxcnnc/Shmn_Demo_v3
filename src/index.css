@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Базовые стили */
+html {
+  @apply antialiased;
+}
+
+body {
+  @apply bg-black text-white min-h-screen;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Стили скроллбара */
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: none;
+}
+
+/* Мобильные утилиты */
+@layer utilities {
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  .mobile-container {
+    @apply w-full px-4 sm:px-6 lg:px-8 mx-auto;
+    max-width: min(100vw - 32px, 80rem);
+  }
+  
+  .duration-2000 {
+    transition-duration: 2000ms;
+  }
+}
+
+.nav-link {
+  @apply transition-colors duration-200;
+}
+
+.border-white\/20 {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Стили для иконки Sparkles */
+.lucide-sparkles path {
+  stroke: #b7985a;
+  stroke-width: 2;
+}
+
+/* Стили для иконок */
+.lucide-sparkles path,
+.lucide-phone path,
+.lucide-mail path,
+.lucide-mail rect,
+.lucide-map-pin path,
+.lucide-map-pin circle,
+.lucide-send path {
+  stroke: #b7985a;
+  stroke-width: 2;
+}
+
+/* Переопределение для белой иконки телеграма */
+.telegram-button-icon path {
+  stroke: white;
+}
